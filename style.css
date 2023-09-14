@@ -1,0 +1,335 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --facebook-color: #3b5998;
+  --twitter-color: #00acee;
+  --instagram-color: #3f729b;
+  --pet-color: #a571a1;
+  --pet-color-hover: #886384;
+  --text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+/* header başlangıç */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+header nav ul li {
+  display: flex;
+  gap: 30px;
+}
+
+header .nav-first ul li a {
+  color: #121212;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+header .nav-first ul li a:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 3px;
+  padding: 2px 5px;
+  transition: all 500ms ease-in-out;
+}
+
+header .middle-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header .middle-area img:hover {
+  transform: scale(0.9);
+  transition: all 0.5s ease-in-out;
+}
+header .middle-area h1 {
+  color: #121212;
+
+  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.3);
+}
+
+header .nav-second ul li a {
+  font-size: 25px;
+}
+header .nav-second ul li a:nth-child(1) {
+  color: var(--instagram-color);
+}
+header .nav-second ul li a:nth-child(2) {
+  color: var(--twitter-color);
+}
+header .nav-second ul li a:nth-child(3) {
+  color: var(--facebook-color);
+}
+header .nav-second ul li a:hover {
+  transform: translateY(-5px);
+  transition: 500ms;
+}
+
+/* header bitiş */
+
+/* lake section */
+
+.sec-lake {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.sec-lake .sec-lake_area {
+  position: relative;
+}
+
+.sec-lake .sec-lake_area video {
+  border-radius: 10px;
+}
+.sec-lake .sec-lake_area h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(128, 128, 128, 0.344);
+  padding: 100px 200px;
+  color: white;
+  font-size: 50px;
+  white-space: nowrap;
+  border-radius: 10px;
+}
+
+/* lake section */
+
+/* info */
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 100px 0;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.info div {
+  flex: 2;
+  text-align: center;
+  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.info img {
+  flex: 1;
+
+  border-radius: 10px;
+  width: 200px;
+}
+.info div h1 {
+  text-shadow: var(--text-shadow);
+  font-size: 35px;
+}
+.info div p {
+  font-size: 20px;
+}
+
+/* info bitiş */
+
+/* cart sec */
+main .sec-animal {
+  width: 100%;
+  padding: 35px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+main .sec-animal .cart {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+main .sec-animal .cart img {
+  width: 250px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+main .sec-animal .cart h1 {
+  text-shadow: #fc0 1px 0 10px;
+  color: white;
+}
+main .sec-animal .cart p {
+  color: white;
+}
+main .sec-animal .cart button {
+  border: none;
+  margin-bottom: 10px;
+  padding: 5px 8px;
+  border-radius: 5px;
+  background-color: #97d9e1;
+  color: white;
+}
+main .sec-animal .cart:hover {
+  transform: translateX(5px);
+  transition: 500ms;
+}
+
+/* cart sec */
+
+/* bird talk */
+.bird-talk {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  /* tersine çevir bıkısmı */
+  flex-direction: row-reverse;
+}
+
+.bird-talk .karga:hover::before {
+  content: "selamlar daha fazlası için aşağı kaydır";
+  position: absolute;
+  right: 330px;
+  border: 1px solid;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+
+.bird-talk form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  gap: 25px;
+  flex-basis: 45%;
+}
+.bird-talk form input {
+  padding: 7px 0;
+  border: none;
+  background-color: #f3f3f3;
+  border-radius: 3px;
+}
+/* footer */
+footer {
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+
+footer .footer-area {
+  display: flex;
+  width: 100%;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer .footer-area .footer-area-animal_info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-top: 1px solid gray;
+  color: white;
+}
+footer .footer-area .footer-area-animal {
+  text-align: center;
+}
+
+footer .footer-area .footer-area-animal img {
+  width: 50px;
+  height: 55px;
+}
+
+footer .social-media {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+}
+footer .social-media a:nth-child(1) {
+  color: var(--instagram-color);
+}
+footer .social-media a:nth-child(2) {
+  color: var(--twitter-color);
+}
+footer .social-media a:nth-child(3) {
+  color: var(--facebook-color);
+}
+footer .social-media a:hover {
+  color: white;
+  transition: all 500ms;
+  /* transform: rotateZ(360deg); */
+}
+footer h1 {
+  text-align: center;
+  background-color: #121212;
+  color: white;
+  border-radius: 50%;
+}
+
+@media (max-width: 650px) {
+  header .nav-first,
+  .nav-second {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) {
+  .sec-lake .sec-lake_area h1 {
+    padding: 10px 30px;
+    font-size: 25px;
+  }
+  .sec-lake .sec-lake_area video {
+    width: 500px;
+  }
+  .info {
+    flex-direction: column;
+  }
+  .info div {
+    margin: auto;
+  }
+  .info img {
+    margin: auto;
+  }
+  .bird-talk {
+    flex-direction: column;
+  }
+  .bird-talk img {
+    height: 300px;
+  }
+
+  .bird-talk form {
+    margin: 0px 50px;
+    margin-bottom: 100px;
+  }
+
+  .bird-talk .karga:hover::before {
+    content: "burası Çok dar";
+    position: absolute;
+    left: 150px;
+    width: 100px;
+    padding: 10px 20px;
+  }
+}
